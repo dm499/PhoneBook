@@ -1,0 +1,17 @@
+﻿@page
+@model Contact.Pages.ContactBook.DeleteModel
+@{
+    ViewData["Title"] = "Delete Existing Contact";
+}
+
+<h1>Delete Confirmation</h1>
+<div class="alert alert-danger">
+    <h5>
+        Are you sure you want to Delete existing Contact?
+    </h5>
+    <form method="post">
+        <button type="submit" class="btn btn-danger">Yes</button>
+        <a asp-page="Index" class="btn btn-primary">No</a>
+    </form>
+</div>
+
