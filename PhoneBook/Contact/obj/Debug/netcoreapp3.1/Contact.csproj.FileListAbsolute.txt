@@ -421,3 +421,4 @@ C:\Users\Max\Desktop\ASP.NET\GitHubProjects\PhoneBook\Contact\obj\Debug\netcorea
 C:\Users\Max\Desktop\ASP.NET\GitHubProjects\PhoneBook\Contact\obj\Debug\netcoreapp3.1\Contact.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Max\Desktop\ASP.NET\GitHubProjects\PhoneBook\Contact\obj\Debug\netcoreapp3.1\Contact.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Max\Desktop\ASP.NET\GitHubProjects\PhoneBook\Contact\obj\Debug\netcoreapp3.1\Razor\Pages\ContactBook\Index.cshtml.g.cs
+C:\Users\Max\Desktop\ASP.NET\GitHubProjects\PhoneBook\Contact\obj\Debug\netcoreapp3.1\Razor\Pages\ContactBook\Create.cshtml.g.cs

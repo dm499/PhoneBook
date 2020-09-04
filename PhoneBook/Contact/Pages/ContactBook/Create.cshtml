@@ -1,0 +1,73 @@
+﻿@page
+@model Contact.Pages.ContactBook.CreateModel
+@{
+    ViewData["Title"] = "Add new Contact";
+}
+
+<br />
+<h2 class="text-info">Add New Contact</h2>
+<br />
+
+<div class="border container" style="padding:30px;">
+    <form method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Phones.FirstName" class="control-label"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Phones.FirstName" class="form-control" />
+                <span asp-validation-for="Phones.FirstName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Phones.LastName" class="control-label"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Phones.LastName" class="form-control" />
+                <span asp-validation-for="Phones.LastName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Phones.LonestarNumber" class="control-label"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Phones.LonestarNumber" class="form-control" />
+                <span asp-validation-for="Phones.LonestarNumber" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Phones.OrangeNumber" class="control-label"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Phones.OrangeNumber" class="form-control" />
+                <span asp-validation-for="Phones.OrangeNumber" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Phones.Email" class="control-label"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Phones.Email" class="form-control" />
+                <span asp-validation-for="Phones.Email" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3 offset-3">
+                <input type="submit" value="Add" class="btn btn-outline-primary form-control" />
+            </div>
+            <div class="col-3">
+                <a asp-page="Index" class="btn btn-outline-secondary form-control">Back</a>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
