@@ -1,0 +1,80 @@
+﻿@page
+@model Contact.Pages.ContactBook.IndexModel
+@{
+    ViewData["Title"] = "List of Contact";
+}
+
+<br />
+<div class="container row p-0 m-0">
+    <div class="col-9">
+        <h2 class="text-info">List of Contact</h2>
+    </div>
+    <div class="col-3">
+        <a asp-page="Create" class="btn btn-info form-control text-white">Add New Contact</a>
+    </div>
+</div>
+
+<div class="col-12 border p-3 mt-3">
+
+    <form method="post">
+        @if (Model.Phones.Count() > 0)
+        {
+            <div class="alert alert-success">
+                Available contact...
+            </div>
+
+            <table class="table table-striped border">
+                <tr class="table-secondary">
+                    <th>
+                        <label asp-for="Phones.FirstOrDefault().FirstName"></label>
+                    </th>
+                    <th>
+                        <label asp-for="Phones.FirstOrDefault().LastName"></label>
+                    </th>
+                    <th>
+                        <label asp-for="Phones.FirstOrDefault().LonestarNumber"></label>
+                    </th>
+                    <th>
+                        <label asp-for="Phones.FirstOrDefault().OrangeNumber"></label>
+                    </th>
+                    <th>
+                        <label asp-for="Phones.FirstOrDefault().Email"></label>
+                    </th>
+                    <th></th>
+                </tr>
+                @foreach (var item in Model.Phones)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(m => item.FirstName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(m => item.LastName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(m => item.LonestarNumber)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(m => item.OrangeNumber)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(m => item.Email)
+                        </td>
+                        <td>
+                            <a asp-page="Details" asp-route-id="@item.Id" class="btn btn-outline-secondary">Details</a>
+                            <a asp-page="Edit" asp-route-id="@item.Id" class="btn btn-outline-success">Edit</a>
+                            <a asp-page="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </table>
+        }
+        else
+        {
+            <div class="alert alert-danger">
+                No contact available.
+            </div>
+        }
+    </form>
+</div>
+
