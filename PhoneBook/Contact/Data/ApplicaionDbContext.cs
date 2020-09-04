@@ -1,8 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Contact.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Contact.Data
 {
@@ -12,5 +9,7 @@ namespace Contact.Data
             : base (options)
         {
         }
+
+        public DbSet<PhoneContact> Phones { get; set; }
     }
 }
